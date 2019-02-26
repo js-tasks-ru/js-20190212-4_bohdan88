@@ -14,4 +14,4 @@ describe("1-module-2-task", function() {
         expect(isValid('Ili')).toEqual(false);
     });
 
-});
+})
