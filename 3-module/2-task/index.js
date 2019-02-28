@@ -11,7 +11,7 @@ calendar[Symbol.iterator] = function () {
     let fromDate = begin.getDate() + 1;
     let toDate = finish.getDate() + 1;
 
-    let countMonth = ( new Date(begin.getFullYear(), begin.getMonth(), 0).getDate());
+    let countMonth = (32 - new Date(begin.getFullYear(), begin.getMonth(), 32).getDate());
 
   
     return {
@@ -22,13 +22,15 @@ calendar[Symbol.iterator] = function () {
                 }
                 
 
-               let putBrackets = (begin.getDay() === 5 || begin.getDay() === 6);
+               let putBrackets = !!(begin.toString().includes('Sun')|| begin.toString().includes('Sat'));
                
                 return {
                     done: false,
                     value: fromDate < 10 ? putBrackets ? '[' +  0 + '' + fromDate++ + ']' : 
                      0 + '' + fromDate++   : putBrackets ? '[' +  '' + fromDate++ + ']':
-                     '' + fromDate++ 
+                     '' + fromDate++
+
+                   
                 }
             } else {
                 return {
