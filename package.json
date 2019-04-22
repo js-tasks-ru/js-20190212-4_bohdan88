@@ -31,10 +31,6 @@
     "karma-phantomjs-launcher": "^1.0.4"
   },
   "dependencies": {
-    "babel-loader": "^8.0.5",
-    "babel-preset-env": "^1.7.0",
-    "path": "^0.12.7",
-    "snapdragon-node": "^3.0.0",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
   }
